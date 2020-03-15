@@ -1,6 +1,6 @@
 import 'package:dating_app/styleguide/colors.dart';
 import 'package:flutter/material.dart';
-
+                         
 final TextStyle headingTextStyle = TextStyle(
   fontSize: 32.0,
   color: Colors.white,
