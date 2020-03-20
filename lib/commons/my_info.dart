@@ -1,3 +1,4 @@
+import 'package:dating_app/commons/radial_progress.dart';
 import 'package:dating_app/commons/rounded_image.dart';
 import 'package:dating_app/styleguide/text_style.dart';
 import 'package:flutter/material.dart';
@@ -7,10 +8,13 @@ class MyInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        RoundedImage(
-          imagePath: "assets/images/anne.jpeg",
-          size: Size.fromWidth(120.0),
-        ),
+        RadialProgress(
+            width: 4,
+            goalCompleted: 0.9,
+            child: RoundedImage(
+              imagePath: "assets/images/anne.jpeg",
+              size: Size.fromWidth(120.0),
+            )),
         SizedBox(
           height: 10.0,
         ),

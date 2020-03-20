@@ -13,7 +13,7 @@ class ProfilePage extends StatelessWidget {
           Column(
             children: <Widget>[
               Expanded(
-                  flex: 4,
+                  flex: 5,
                   child: Stack(
                     children: <Widget>[
                       OpaqueImage(
