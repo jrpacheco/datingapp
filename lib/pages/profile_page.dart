@@ -1,3 +1,4 @@
+import 'package:dating_app/commons/opaque_Image.dart';
 import 'package:dating_app/styleguide/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -9,11 +10,24 @@ class ProfilePage extends StatelessWidget {
         children: <Widget>[
           Column(
             children: <Widget>[
-              Expanded(flex: 4,child: Container(color: primaryColor,),),
-              Expanded(flex: 5,child: Container(color: secondaryTextColor,),)
+              Expanded(
+                  flex: 4,
+                  child: Stack(
+                    children: <Widget>[
+                      OpaqueImage(
+                        imageUrl: 'assets/images/anne.jpeg',
+                      )
+                    ],
+                  )),
+              Expanded(
+                flex: 5,
+                child: Container(
+                  color: secondaryTextColor,
+                ),
+              )
             ],
           )
-        ],        
+        ],
       ),
     );
   }
