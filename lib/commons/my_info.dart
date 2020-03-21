@@ -6,17 +6,17 @@ import 'package:flutter/material.dart';
 class MyInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Expanded(      
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         RadialProgress(
             width: 4,
             goalCompleted: 0.9,
             child: RoundedImage(
               imagePath: "assets/images/anne.jpeg",
-              size: Size.fromWidth(120.0),
+              size: Size.fromWidth(90.0),
             )),
         SizedBox(
-          height: 10.0,
+          height: 5.0,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -32,7 +32,7 @@ class MyInfo extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: 10.0,
+          height: 5.0,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
