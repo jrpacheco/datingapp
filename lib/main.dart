@@ -1,7 +1,14 @@
 import 'package:dating_app/pages/profile_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(MyApp());
+  });
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -9,11 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: 'Relaway'
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Relaway'),
       home: ProfilePage(),
-          );
-        }
-      }
+    );
+  }
+}

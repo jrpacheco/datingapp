@@ -12,7 +12,7 @@ class MyInfo extends StatelessWidget {
             width: 4,
             goalCompleted: 0.9,
             child: RoundedImage(
-              imagePath: "assets/images/anne.jpeg",
+              imagePath: "assets/images/profile.jpeg",
               size: Size.fromWidth(90.0),
             )),
         SizedBox(
@@ -22,11 +22,11 @@ class MyInfo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "Ester Valentina",
+              "XXX",
               style: whiteNameTextStyle,
             ),
             Text(
-              ", 24",
+              ", 32",
               style: whiteNameTextStyle,
             )
           ],
