@@ -12,7 +12,7 @@ class MyInfo extends StatelessWidget {
             width: 4,
             goalCompleted: 0.9,
             child: RoundedImage(
-              imagePath: "assets/images/profile.jpeg",
+              imagePath: "assets/images/anne.jpeg",
               size: Size.fromWidth(90.0),
             )),
         SizedBox(

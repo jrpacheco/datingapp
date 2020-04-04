@@ -1,3 +1,4 @@
+import 'package:dating_app/commons/narrow_app_bar.dart';
 import 'package:dating_app/styleguide/colors.dart';
 import 'package:dating_app/styleguide/text_style.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,15 @@ class SuperLikesMePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: NarrowAppBar(
+        leading: GestureDetector(
+          onTap: (){
+            Navigator.of(context).pop();
+          },
+          child: Icon(Icons.arrow_back),
+        ),
+        trailing: Text("SELECT", style: actionMenuStyle,),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -43,17 +53,92 @@ class SuperLikesMePage extends StatelessWidget {
                   width: 20,
                 ),
                 Container(
-                    width: 25,
-                    height: 25,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: primaryColor),
-                    child: Center(
-                      child: Text(
-                        "5",
-                        style: subTitleStyle.copyWith(color: Colors.white),
-                      ),
-                    ))
+                  width: 25,
+                  height: 25,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle, color: primaryColor),
+                  child: Center(
+                    child: Text(
+                      "5",
+                      style: subTitleStyle.copyWith(color: Colors.white),
+                    ),
+                  ),
+                ),
+                Spacer(),
+                Text(
+                  "1h",
+                  style: subTitleStyle.copyWith(color: Colors.black),
+                )
               ],
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return Card(
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: ListTile(
+                    title: Text(
+                      "Antonio",
+                      style: titleStyle,
+                    ),
+                    subtitle: Row(
+                      children: <Widget>[
+                        Image.asset(
+                          "assets/icons/location_pin.png",
+                          width: 15,
+                          height: 15,
+                          color: Colors.black,
+                        ),
+                        Text(
+                          "34 kilometers",
+                          style: whiteSubHeadingTextStyle.copyWith(
+                              color: Colors.black, fontSize: 14),
+                        )
+                      ],
+                    ),
+                    leading: ClipOval(
+                      child: Image.asset(
+                        "assets/images/anne.jpeg",
+                        width: 50,
+                        height: 50,
+                      ),
+                    ),
+                    trailing: SizedBox(
+                      width: 75,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: <Widget>[
+                          Expanded(
+                              child: Row(
+                            children: <Widget>[
+                              Container(
+                                width: 15,
+                                height: 15,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.green),
+                              ),
+                              Spacer(),
+                              Text(
+                                "ONLINE",
+                                style: whiteSubHeadingTextStyle.copyWith(
+                                    color: Colors.green, fontSize: 14),
+                              )
+                            ],
+                          )),
+                          Expanded(child: Icon(Icons.star, color: Colors.amber,))
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              },
+              itemCount: 10,
             ),
           )
         ],

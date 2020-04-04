@@ -22,7 +22,7 @@ class ProfilePage extends StatelessWidget {
                   child: Stack(
                     children: <Widget>[
                       OpaqueImage(
-                        imageUrl: 'assets/images/profile.jpeg',
+                        imageUrl: 'assets/images/anne.jpeg',
                       ),
                       SafeArea(
                           child: Padding(
