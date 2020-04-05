@@ -23,6 +23,7 @@ class NarrowAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  // TODO: implement preferredSize
+  //
+  //TODO: implement preferredSize
   Size get preferredSize => Size.fromHeight(40);
 }

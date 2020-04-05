@@ -1,3 +1,4 @@
+import 'package:dating_app/commons/localization.dart';
 import 'package:dating_app/commons/radial_progress.dart';
 import 'package:dating_app/commons/rounded_image.dart';
 import 'package:dating_app/styleguide/text_style.dart';
@@ -36,16 +37,16 @@ class MyInfo extends StatelessWidget {
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset(
+          children: <Widget>[Localization()
+           /* Image.asset(
               "assets/icons/location_pin.png",
               width: 20.0,
               color: Colors.white,
             ),
             Text(
-              " 32 kilometers",
+              " 32 kilometers gsaygsyagsyagsaygsay huhuhu",
               style: whiteSubHeadingTextStyle,
-            )
+            )*/
           ],
         )
       ]),
