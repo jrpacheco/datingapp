@@ -1,3 +1,4 @@
+import 'package:dating_app/commons/PointsListView.dart';
 import 'package:dating_app/commons/narrow_app_bar.dart';
 import 'package:dating_app/styleguide/colors.dart';
 import 'package:dating_app/styleguide/text_style.dart';
@@ -73,7 +74,8 @@ class SuperLikesMePage extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: ListView.builder(
+            child: PointsListView()
+            /*ListView.builder(
               itemBuilder: (context, index) {
                 return Card(
                   elevation: 2,
@@ -139,7 +141,7 @@ class SuperLikesMePage extends StatelessWidget {
                 );
               },
               itemCount: 10,
-            ),
+            ),*/
           )
         ],
       ),
